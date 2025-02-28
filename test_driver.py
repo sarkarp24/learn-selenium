@@ -26,7 +26,7 @@ options.add_argument(f"--user-data-dir={user_data_dir}")
 
 #service = Service(ChromeDriverManager().install())
 service = Service()
-#options.add_argument('--headless')
+options.add_argument('--headless')
 driver = webdriver.Chrome(service=service, options=options)
 driver.implicitly_wait(5)
 
