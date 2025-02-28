@@ -15,14 +15,15 @@ driver.quit()
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.chrome import ChromeDriverManager
 import tempfile
 
 options = Options()
 user_data_dir = tempfile.mkdtemp() #Creates a temporary directory.
 options.add_argument(f"--user-data-dir={user_data_dir}")
 
-service = Service(ChromeDriverManager().install())
+#service = Service(ChromeDriverManager().install())
+service = Service()
 options.add_argument('--headless')
 driver = webdriver.Chrome(service=service, options=options)
 
